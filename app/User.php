@@ -37,6 +37,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    const ROLE_ADMIN = "admin";
+    const ROLE_GUEST = "guest";
+
     public function articles()
     {
         return $this->hasMany('App/Article');

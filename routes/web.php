@@ -14,14 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('categories', 'CategoryController');
-
-Route::resource('tags', 'TagController');
-
-Route::resource('articles', 'ArticleController');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/articles/{id}/{token}', 'ArticleController@delete');
